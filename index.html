@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080808">
+    <meta name="description" content="Oreste Coscia, tattoo e piercing dal 1999 a Castrovillari. Blackwork, fineline, lettering, piercing e microdermals. Sito dimostrativo.">
+    <title>Oreste Coscia — Tattoo & Piercing</title>
+    <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/logo/favicon-192.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="assets/hero/statua-hero-trasparente.webp" as="image" type="image/webp">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/config.js" defer></script>
+    <script src="js/vendor/gsap.min.js" defer></script>
+    <script src="js/vendor/ScrollTrigger.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Vai al contenuto</a>
+
+    <header class="header" id="header">
+      <a class="brand" href="#home" aria-label="Oreste Coscia, homepage">
+        <img src="assets/logo/simbolo-bianco.svg" alt="" width="62" height="68">
+        <span class="brand-type">
+          <strong>ORESTE COSCIA</strong>
+          <span>TATTOO & PIERCING</span>
+        </span>
+      </a>
+      <nav class="nav" id="navigation" aria-label="Menu principale">
+        <a href="#artista">Artista</a>
+        <a href="#lavori">Lavori</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+      <a class="button booking" href="#contatti">Prenota <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false" aria-label="Apri menu">
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <noscript>
+      <style>
+        .carousel-stage {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 20px;
+          height: auto;
+        }
+        .slide[data-position] {
+          position: relative;
+          left: auto;
+          width: 100%;
+          height: 400px;
+          margin: 0;
+          opacity: 1;
+          filter: none;
+          transform: none;
+        }
+        .carousel-arrow,
+        .carousel-meta,
+        .carousel-progress {
+          display: none;
+        }
+        @media (max-width: 760px) {
+          .header {
+            height: auto;
+            flex-wrap: wrap;
+          }
+          .nav {
+            position: static;
+            display: flex;
+            flex-direction: row;
+            order: 4;
+            width: 100%;
+            height: auto;
+            padding: 8px 0;
+          }
+          .nav a {
+            font-family: var(--body);
+            font-size: 15px;
+            letter-spacing: 0;
+          }
+          .menu-toggle,
+          .autoplay-toggle,
+          .credits-toggle {
+            display: none;
+          }
+        }
+      </style>
+    </noscript>
+
+    <main id="main">
+      <section class="hero section" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow hero-since"><span>Dal 1999</span><i></i></div>
+          <h1 id="hero-title"><span>ORESTE</span><span>COSCIA</span></h1>
+          <p class="hero-subtitle">TATTOO <em>&amp;</em> PIERCING</p>
+          <p class="services">BLACKWORK <b>/</b> FINELINE <b>/</b> LETTERING <b>/</b><br> PIERCING <b>/</b> MICRODERMALS</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-ring"></div>
+          <div class="statue-motion">
+            <img class="hero-statue" src="assets/hero/statua-hero-trasparente.webp" alt="" width="1307" height="1203" fetchpriority="high">
+            <span class="eye-flash"></span>
+            <span class="crosshair hero-cross"></span>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#artista" aria-label="Scorri alla sezione L’artista">
+          <span class="mouse"><i></i></span>
+          <span class="scroll-chevron"></span>
+        </a>
+        <span class="hero-coordinate mono" aria-hidden="true">39°48′ N — 16°12′ E</span>
+      </section>
+
+      <section class="artist section section-pad" id="artista" aria-labelledby="artist-title">
+        <div class="artist-photo corner-frame" data-reveal="image">
+          <img src="assets/artist/tattoo-machine.webp" alt="Dettaglio creativo di una macchina da tatuaggi al lavoro" width="482" height="615" loading="lazy">
+        </div>
+        <div class="artist-copy">
+          <div class="eyebrow section-label" data-reveal><span class="slashes">//</span><span>L’artista</span><i></i></div>
+          <h2 id="artist-title" data-reveal>ORESTE<br>COSCIA</h2>
+          <div class="accent-rule" data-reveal></div>
+          <p data-reveal>Oreste Coscia è un tatuatore e piercer attivo dal 1999. Realizza tatuaggi in stile blackwork, fineline e lettering, e si occupa di piercing e microdermals.</p>
+        </div>
+      </section>
+
+      <section class="works section section-pad" id="lavori" aria-labelledby="works-title">
+        <div class="eyebrow section-label" data-reveal><span class="slashes">//</span><span>I lavori</span><i></i></div>
+        <div class="works-heading">
+          <h2 id="works-title" data-reveal>I LAVORI</h2>
+          <p class="mono works-services" data-reveal>
+            <span>BLACKWORK</span>
+            <span>FINELINE</span>
+            <span>LETTERING</span>
+            <span>PIERCING</span>
+            <span>MICRODERMALS</span>
+          </p>
+          <span class="crosshair" aria-hidden="true"></span>
+        </div>
+        <div class="carousel" role="region" aria-roledescription="carosello" aria-label="Cinque tatuaggi di Oreste Coscia" tabindex="0">
+          <div class="carousel-stage">
+            <figure class="slide is-active" data-position="0" role="group" aria-roledescription="diapositiva" aria-label="1 di 5: Ritratto">
+              <img src="assets/gallery/tattoo-01-ritratto-bw.webp" alt="Tatuaggio di un ritratto femminile con fiore" width="402" height="497" loading="lazy">
+            </figure>
+            <figure class="slide" data-position="1" role="group" aria-roledescription="diapositiva" aria-label="2 di 5: Tigre">
+              <img src="assets/gallery/tattoo-02-tigre-bw.webp" alt="Tatuaggio realistico di una tigre" width="498" height="616" loading="lazy">
+            </figure>
+            <figure class="slide" data-position="2" role="group" aria-roledescription="diapositiva" aria-label="3 di 5: Ornamentale">
+              <img src="assets/gallery/tattoo-03-ornamentale-bw.webp" alt="Tatuaggio ornamentale simmetrico con elementi floreali" width="435" height="704" loading="lazy">
+            </figure>
+            <figure class="slide" data-position="-2" role="group" aria-roledescription="diapositiva" aria-label="4 di 5: Serpente">
+              <img src="assets/gallery/tattoo-04-serpente-bw.webp" alt="Tatuaggio di un serpente con tratteggio nero" width="554" height="554" loading="lazy">
+            </figure>
+            <figure class="slide" data-position="-1" role="group" aria-roledescription="diapositiva" aria-label="5 di 5: Farfalla e lettering">
+              <img src="assets/gallery/tattoo-05-farfalla-lettering-bw.webp" alt="Tatuaggio di farfalla con luna e lettering" width="554" height="554" loading="lazy">
+            </figure>
+          </div>
+          <button class="carousel-arrow prev" type="button" aria-label="Tatuaggio precedente">←</button>
+          <button class="carousel-arrow next" type="button" aria-label="Tatuaggio successivo">→</button>
+          <div class="carousel-meta">
+            <span class="slide-counter mono"><span id="slide-number">01</span><span class="counter-total"> / 05</span></span>
+            <button class="autoplay-toggle mono" type="button" aria-label="Metti in pausa il carosello" aria-pressed="false">PAUSA <span aria-hidden="true">Ⅱ</span></button>
+          </div>
+          <div class="carousel-progress" aria-hidden="true"><span></span></div>
+          <p class="sr-only" id="carousel-status" aria-live="polite" aria-atomic="true"></p>
+        </div>
+      </section>
+
+      <section class="contact section section-pad" id="contatti" aria-labelledby="contact-title">
+        <div class="contact-visual" aria-hidden="true">
+          <div class="contact-ring"></div>
+          <img src="assets/contacts/statua-dettaglio-contatti.webp" alt="" width="957" height="970" loading="lazy">
+          <span class="crosshair"></span>
+        </div>
+        <div class="contact-intro">
+          <div class="eyebrow section-label" data-reveal><span class="slashes">//</span><span>Contatti</span><i></i></div>
+          <h2 id="contact-title" data-reveal>PRENOTA<br>IL TUO TATTOO<span class="neon">.</span></h2>
+          <p data-reveal>Scrivimi per info, disponibilità e prenotazioni.</p>
+          <a class="text-link contact-call" data-contact="phone" href="tel:+393491203719">Parliamone <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="contact-columns">
+          <div class="contact-column" data-reveal>
+            <h3 class="eyebrow">Indirizzo <i></i></h3>
+            <address>Corso Calabria, 190<br>87012 Castrovillari (CS)</address>
+            <a class="text-link" data-contact="maps" href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x133f41a1de16ef59:0xdc4608dcd99b9801" target="_blank" rel="noopener noreferrer">Indicazioni <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="contact-column" data-reveal>
+            <h3 class="eyebrow">Orari <i></i></h3>
+            <dl class="hours mono">
+              <div><dt>LUN</dt><dd>09:30 — 17:30</dd></div>
+              <div><dt>MAR</dt><dd>09:30 — 17:30</dd></div>
+              <div class="closed"><dt>MER</dt><dd>CHIUSO</dd></div>
+              <div><dt>GIO</dt><dd>09:30 — 17:30</dd></div>
+              <div><dt>VEN</dt><dd>09:30 — 17:30</dd></div>
+              <div class="closed"><dt>SAB</dt><dd>CHIUSO</dd></div>
+              <div class="closed"><dt>DOM</dt><dd>CHIUSO</dd></div>
+            </dl>
+          </div>
+          <div class="contact-column" data-reveal>
+            <h3 class="eyebrow">Contatti <i></i></h3>
+            <a class="phone" data-contact="phone" href="tel:+393491203719">+39 349 120 3719</a>
+            <div class="email-placeholder mono"><span>EMAIL</span><span data-email-placeholder>[EMAIL_DA_CONFERMARE]</span></div>
+            <a class="text-link" data-contact="instagram" href="https://www.instagram.com/orestecoscia_tattoo/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="studio-note" data-reveal>
+          <span class="mono">APERTI A COLLABORAZIONI GUESTS.</span>
+          <p class="mono">STUDIO AUTORIZZATO ASL<br><span class="neon">//</span>Strumentazione sterile monouso e inchiostri certificati, atossici e ipoallergenici.</p>
+        </div>
+        <div class="reviews" data-reveal>
+          <div><span class="eyebrow">Recensioni Google</span><p>La tua prossima storia<br>comincia qui.</p></div>
+          <a class="button button-outline" data-contact="maps" href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x133f41a1de16ef59:0xdc4608dcd99b9801" target="_blank" rel="noopener noreferrer">Leggi le recensioni <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-main">
+        <a href="#home" class="mono footer-brand">ORESTE COSCIA — TATTOO &amp; PIERCING</a>
+        <span class="footer-rule"></span>
+        <a class="mono" data-contact="instagram" href="https://www.instagram.com/orestecoscia_tattoo/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a>
+        <span class="mono facebook-placeholder">FACEBOOK <small>[FACEBOOK_DA_CONFERMARE]</small></span>
+      </div>
+      <div class="demo-note mono">
+        <span>SITO DIMOSTRATIVO — CONCEPT WEB</span>
+        <button type="button" class="credits-toggle" aria-haspopup="dialog">Fonti e crediti <span aria-hidden="true">+</span></button>
+      </div>
+    </footer>
+
+    <dialog class="credits-dialog" aria-labelledby="credits-title">
+      <button class="dialog-close" type="button" aria-label="Chiudi crediti">×</button>
+      <span class="eyebrow neon">// NOTE DI PROGETTO</span>
+      <h2 id="credits-title">Fonti e crediti</h2>
+      <p>Sito vetrina dimostrativo. Le cinque fotografie dei tatuaggi e il logo provengono dal materiale fornito per il progetto. La statua e il dettaglio della macchina da tatuaggi sono immagini creative generate: non raffigurano lo studio o l’artista.</p>
+      <p>Telefono, orari, indirizzo e dichiarazioni su autorizzazioni e materiali sono dati di progetto da confermare con lo studio prima della pubblicazione ufficiale. Email e Facebook sono in attesa di conferma. Non vengono mostrati punteggi o conteggi di recensioni non verificati.</p>
+      <p>Caratteri: Syne, Inter Tight, IBM Plex Mono (Google Fonts). Animazioni: GSAP e ScrollTrigger.</p>
+    </dialog>
+  </body>
+</html>

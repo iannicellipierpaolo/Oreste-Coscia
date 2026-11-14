@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "ritratto",
+    "original": "assets/gallery/tattoo-01-ritratto.jpg",
+    "preview_bw": "assets/gallery/tattoo-01-ritratto-bw.webp",
+    "width": 402,
+    "height": 497
+  },
+  {
+    "id": 2,
+    "title": "tigre",
+    "original": "assets/gallery/tattoo-02-tigre.jpg",
+    "preview_bw": "assets/gallery/tattoo-02-tigre-bw.webp",
+    "width": 498,
+    "height": 616
+  },
+  {
+    "id": 3,
+    "title": "ornamentale",
+    "original": "assets/gallery/tattoo-03-ornamentale.jpg",
+    "preview_bw": "assets/gallery/tattoo-03-ornamentale-bw.webp",
+    "width": 435,
+    "height": 704
+  },
+  {
+    "id": 4,
+    "title": "serpente",
+    "original": "assets/gallery/tattoo-04-serpente.jpg",
+    "preview_bw": "assets/gallery/tattoo-04-serpente-bw.webp",
+    "width": 554,
+    "height": 554
+  },
+  {
+    "id": 5,
+    "title": "farfalla-lettering",
+    "original": "assets/gallery/tattoo-05-farfalla-lettering.jpg",
+    "preview_bw": "assets/gallery/tattoo-05-farfalla-lettering-bw.webp",
+    "width": 554,
+    "height": 554
+  }
+]
