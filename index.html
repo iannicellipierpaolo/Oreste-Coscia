@@ -11,11 +11,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/config.js" defer></script>
-    <script src="js/vendor/gsap.min.js" defer></script>
-    <script src="js/vendor/ScrollTrigger.min.js" defer></script>
-    <script src="js/script.js" defer></script>
+    <style>
+      /* Il canvas decorativo non deve mai partecipare al layout. */
+      .bee-stage {
+        position: fixed;
+        inset: 0;
+        z-index: 5;
+        pointer-events: none;
+        visibility: hidden;
+      }
+
+      #bee-canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+    </style>
+    <link rel="stylesheet" href="css/style.css?v=20261117-2">
+    <script src="js/config.js?v=20261117-2" defer></script>
+    <script src="js/vendor/gsap.min.js?v=20261117-2" defer></script>
+    <script src="js/vendor/ScrollTrigger.min.js?v=20261117-2" defer></script>
+    <script src="js/script.js?v=20261117-2" defer></script>
     <script type="importmap">
       {
         "imports": {
@@ -23,7 +40,7 @@
         }
       }
     </script>
-    <script type="module" src="js/bee.js"></script>
+    <script type="module" src="js/bee.js?v=20261117-2"></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Vai al contenuto</a>
