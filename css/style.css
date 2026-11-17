@@ -300,49 +300,10 @@ h2 {
   font-weight: 400;
 }
 
-.hero-art {
-  position: absolute;
-  z-index: 2;
-  right: -1%;
-  bottom: -2px;
-  width: 63%;
-  max-width: 960px;
-  pointer-events: none;
-}
 
-.statue-motion {
-  position: relative;
-  width: 100%;
-  transform-origin: 50% 100%;
-}
 
-.hero-statue {
-  width: 100%;
-  height: auto;
-  mask-image: linear-gradient(to bottom, #000 88%, transparent 100%);
-}
 
-.eye-flash {
-  position: absolute;
-  top: 18%;
-  left: 52%;
-  width: 31%;
-  height: 14%;
-  background: rgba(216, 252, 1, 0.82);
-  mix-blend-mode: hard-light;
-  transform: rotate(-2deg);
-}
 
-.hero-ring {
-  position: absolute;
-  top: 29%;
-  left: 33%;
-  width: 62%;
-  aspect-ratio: 1;
-  border: 3px solid var(--neon);
-  border-radius: 50%;
-  transform: rotate(-35deg);
-}
 
 .crosshair {
   position: relative;
@@ -682,38 +643,9 @@ h2 {
   isolation: isolate;
 }
 
-.contact-visual {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  right: -10%;
-  width: 57%;
-  pointer-events: none;
-  mask-image: linear-gradient(to bottom, #000 40%, transparent 95%);
-}
 
-.contact-visual img {
-  width: 100%;
-  height: auto;
-  mask-image: linear-gradient(to bottom, #000 25%, transparent 98%);
-}
 
-.contact-ring {
-  position: absolute;
-  z-index: -1;
-  top: 9%;
-  left: -8%;
-  width: 90%;
-  aspect-ratio: 1;
-  border: 3px solid var(--neon);
-  border-radius: 50%;
-}
 
-.contact-visual .crosshair {
-  position: absolute;
-  top: 5%;
-  left: 0;
-}
 
 .contact-intro {
   position: relative;
@@ -1090,10 +1022,6 @@ address {
     font-size: 10.3vw;
   }
 
-  .hero-art {
-    width: 70%;
-    right: -8%;
-  }
 
   .artist {
     gap: 50px;
@@ -1295,16 +1223,7 @@ address {
     margin: 0 7px;
   }
 
-  .hero-art {
-    right: -15%;
-    bottom: 0;
-    width: 118%;
-    max-width: 660px;
-  }
 
-  .hero-ring {
-    border-width: 2px;
-  }
 
   .hero-cross {
     top: 12%;
@@ -1464,16 +1383,7 @@ address {
     padding-bottom: 0;
   }
 
-  .contact-visual {
-    top: 30px;
-    right: -43%;
-    width: 105%;
-    opacity: 0.45;
-  }
 
-  .contact-ring {
-    border-width: 2px;
-  }
 
   .contact-intro {
     padding-bottom: 65px;
@@ -1638,10 +1548,6 @@ address {
     height: 740px;
   }
 
-  .hero-art {
-    width: 125%;
-    right: -19%;
-  }
 
   .hero-coordinate {
     max-width: 100px;
@@ -1673,10 +1579,6 @@ address {
     transform: none;
   }
 
-  .hero-statue,
-  .statue-motion {
-    transform: none !important;
-  }
 
 }
 /* Contiene lo zoom durante la comparsa della foto. */
@@ -1686,4 +1588,137 @@ address {
 
 .artist-photo img {
   transform-origin: center center;
+}
+/* Ape: spazi di posa misurati anche quando il canvas non è attivo. */
+.bee-stage {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.bee-stage canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.bee-ready .bee-stage {
+  visibility: visible;
+}
+
+.bee-ready .bee-still {
+  visibility: hidden;
+}
+
+.menu-open .bee-stage,
+.dialog-open .bee-stage {
+  visibility: hidden;
+}
+
+.bee-home {
+  position: absolute;
+  top: 15%;
+  right: 1%;
+  width: 47%;
+  height: 76%;
+  pointer-events: none;
+}
+
+.bee-still {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.bee-orbit {
+  position: absolute;
+  inset: 14% 12%;
+  border: 1px solid var(--neon);
+  border-radius: 50%;
+  opacity: 0.25;
+  transform: rotate(-28deg) scaleY(0.7);
+  pointer-events: none;
+}
+
+.artist-copy {
+  position: relative;
+  margin-top: 65px;
+}
+
+.bee-artist {
+  position: absolute;
+  width: 150px;
+  height: 130px;
+  top: -130px;
+  right: 0;
+}
+
+.bee-work-lane {
+  display: flex;
+  justify-content: space-between;
+  height: 130px;
+}
+
+.bee-work-lane span {
+  width: 130px;
+  height: 130px;
+}
+
+.contact-action {
+  display: flex;
+  align-items: center;
+  gap: clamp(25px, 5vw, 80px);
+  width: max-content;
+  max-width: 100%;
+}
+
+.bee-contact {
+  width: 180px;
+  height: 150px;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 760px) {
+  .bee-home {
+    top: auto;
+    bottom: 58px;
+    right: 4%;
+    width: 86%;
+    height: 330px;
+  }
+
+  .artist {
+    padding-top: 150px;
+  }
+
+  .artist-copy {
+    margin-top: 0;
+  }
+
+  .bee-artist {
+    width: 110px;
+    height: 100px;
+    top: -115px;
+  }
+
+  .bee-work-lane {
+    height: 110px;
+  }
+
+  .bee-work-lane span {
+    width: 90px;
+    height: 110px;
+  }
+
+  .bee-contact {
+    width: 115px;
+    height: 110px;
+  }
+
+  .contact-action {
+    gap: 25px;
+  }
 }

@@ -271,10 +271,7 @@
       .from(".hero h1 > span:first-child", { x: -45, opacity: 0, duration: 1 }, 0.15)
       .from(".hero h1 > span:last-child", { x: 45, opacity: 0, duration: 1 }, 0.25)
       .from(".hero-subtitle, .services", { y: 15, opacity: 0, stagger: 0.12, duration: 0.7 }, 0.5)
-      .from(".hero-art", { y: 40, opacity: 0, duration: 1.4 }, 0.1)
-      .from(".hero-ring", { scale: 0.8, opacity: 0, duration: 1.4 }, 0.3)
-      .from(".eye-flash", { scaleX: 0, transformOrigin: "left", duration: 0.35 }, 0.8)
-      .fromTo(".eye-flash", { opacity: 0.1 }, { opacity: 1, repeat: 2, yoyo: true, duration: 0.08 }, 1.15);
+;
 
     document.querySelectorAll("[data-reveal]").forEach((element) => {
       if (element.dataset.reveal === "image") {
@@ -331,26 +328,4 @@
     return () => gsap.set("[data-reveal]", { clearProps: "all" });
   });
 
-  motion.add("(min-width: 1000px) and (pointer: fine) and (prefers-reduced-motion: no-preference)", () => {
-    const statue = document.querySelector(".statue-motion");
-    const hero = document.querySelector(".hero");
-    const moveX = gsap.quickTo(statue, "x", { duration: 0.9, ease: "power2.out" });
-    const moveY = gsap.quickTo(statue, "y", { duration: 0.9, ease: "power2.out" });
-    function parallax(event) {
-      const bounds = hero.getBoundingClientRect();
-      moveX((event.clientX / window.innerWidth - 0.5) * 13);
-      moveY(((event.clientY - bounds.top) / bounds.height - 0.5) * 9);
-    }
-    function reset() {
-      moveX(0);
-      moveY(0);
-    }
-    hero.addEventListener("pointermove", parallax);
-    hero.addEventListener("pointerleave", reset);
-    return () => {
-      hero.removeEventListener("pointermove", parallax);
-      hero.removeEventListener("pointerleave", reset);
-      gsap.set(statue, { clearProps: "transform" });
-    };
-  });
 })();

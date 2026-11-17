@@ -11,12 +11,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="preload" href="assets/hero/statua-hero-trasparente.webp" as="image" type="image/webp">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/config.js" defer></script>
     <script src="js/vendor/gsap.min.js" defer></script>
     <script src="js/vendor/ScrollTrigger.min.js" defer></script>
     <script src="js/script.js" defer></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./js/vendor/three/build/three.module.js"
+        }
+      }
+    </script>
+    <script type="module" src="js/bee.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Vai al contenuto</a>
@@ -92,6 +99,9 @@
       </style>
     </noscript>
 
+    <div class="bee-stage" aria-hidden="true">
+      <canvas id="bee-canvas"></canvas>
+    </div>
     <main id="main">
       <section class="hero section" id="home" aria-labelledby="hero-title">
         <div class="hero-copy">
@@ -100,13 +110,9 @@
           <p class="hero-subtitle">TATTOO <em>&amp;</em> PIERCING</p>
           <p class="services">BLACKWORK <b>/</b> FINELINE <b>/</b> LETTERING <b>/</b><br> PIERCING <b>/</b> MICRODERMALS</p>
         </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="hero-ring"></div>
-          <div class="statue-motion">
-            <img class="hero-statue" src="assets/hero/statua-hero-trasparente.webp" alt="" width="1307" height="1203" fetchpriority="high">
-            <span class="eye-flash"></span>
-            <span class="crosshair hero-cross"></span>
-          </div>
+        <div class="bee-home" data-bee-anchor="home" aria-hidden="true">
+          <div class="bee-orbit"></div>
+          <img class="bee-still" src="assets/bee/Oreste_Ape_Neon_Fallback.webp" alt="" width="960" height="960" fetchpriority="high">
         </div>
         <a class="scroll-cue" href="#artista" aria-label="Scorri alla sezione L’artista">
           <span class="mouse"><i></i></span>
@@ -120,6 +126,7 @@
           <img src="assets/artist/tattoo-machine.webp" alt="Dettaglio creativo di una macchina da tatuaggi al lavoro" width="482" height="615" loading="lazy">
         </div>
         <div class="artist-copy">
+          <div class="bee-artist" data-bee-anchor="artist" aria-hidden="true"></div>
           <div class="eyebrow section-label" data-reveal><span class="slashes">//</span><span>L’artista</span><i></i></div>
           <h2 id="artist-title" data-reveal>ORESTE<br>COSCIA</h2>
           <div class="accent-rule" data-reveal></div>
@@ -139,6 +146,10 @@
             <span>MICRODERMALS</span>
           </p>
           <span class="crosshair" aria-hidden="true"></span>
+        </div>
+        <div class="bee-work-lane" aria-hidden="true">
+          <span data-bee-anchor="works-start"></span>
+          <span data-bee-anchor="works-end"></span>
         </div>
         <div class="carousel" role="region" aria-roledescription="carosello" aria-label="Cinque tatuaggi di Oreste Coscia" tabindex="0">
           <div class="carousel-stage">
@@ -170,16 +181,16 @@
       </section>
 
       <section class="contact section section-pad" id="contatti" aria-labelledby="contact-title">
-        <div class="contact-visual" aria-hidden="true">
-          <div class="contact-ring"></div>
-          <img src="assets/contacts/statua-dettaglio-contatti.webp" alt="" width="957" height="970" loading="lazy">
-          <span class="crosshair"></span>
-        </div>
         <div class="contact-intro">
           <div class="eyebrow section-label" data-reveal><span class="slashes">//</span><span>Contatti</span><i></i></div>
           <h2 id="contact-title" data-reveal>PRENOTA<br>IL TUO TATTOO<span class="neon">.</span></h2>
           <p data-reveal>Scrivimi per info, disponibilità e prenotazioni.</p>
+          <div class="contact-action">
           <a class="text-link contact-call" data-contact="phone" href="tel:+393491203719">Parliamone <span aria-hidden="true">↗</span></a>
+            <div class="bee-contact" data-bee-anchor="contact" aria-hidden="true">
+              <img class="bee-still" src="assets/bee/Oreste_Ape_Neon_Fallback.webp" alt="" width="960" height="960" loading="lazy">
+            </div>
+          </div>
         </div>
         <div class="contact-columns">
           <div class="contact-column" data-reveal>
@@ -234,9 +245,9 @@
       <button class="dialog-close" type="button" aria-label="Chiudi crediti">×</button>
       <span class="eyebrow neon">// NOTE DI PROGETTO</span>
       <h2 id="credits-title">Fonti e crediti</h2>
-      <p>Sito vetrina dimostrativo. Le cinque fotografie dei tatuaggi e il logo provengono dal materiale fornito per il progetto. La statua e il dettaglio della macchina da tatuaggi sono immagini creative generate: non raffigurano lo studio o l’artista.</p>
+      <p>Sito vetrina dimostrativo. Le cinque fotografie dei tatuaggi e il logo provengono dal materiale fornito per il progetto. Il dettaglio della macchina da tatuaggi è un’immagine creativa generata: non raffigura lo studio o l’artista. L’ape 3D e la sua anteprima statica provengono dal materiale fornito per il progetto.</p>
       <p>Telefono, orari, indirizzo e dichiarazioni su autorizzazioni e materiali sono dati di progetto da confermare con lo studio prima della pubblicazione ufficiale. Email e Facebook sono in attesa di conferma. Non vengono mostrati punteggi o conteggi di recensioni non verificati.</p>
-      <p>Caratteri: Syne, Inter Tight, IBM Plex Mono (Google Fonts). Animazioni: GSAP e ScrollTrigger.</p>
+      <p>Caratteri: Syne, Inter Tight, IBM Plex Mono (Google Fonts). Animazioni: GSAP e ScrollTrigger. Visualizzazione 3D: Three.js e GLTFLoader.</p>
     </dialog>
   </body>
 </html>
