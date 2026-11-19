@@ -105,39 +105,26 @@
     });
   }
 
-  // Carosello accessibile: loop, pausa esplicita, hover, focus e swipe.
+  // Carosello accessibile: loop, hover, focus e swipe.
   const carousel = document.querySelector(".carousel");
   const slides = [...carousel.querySelectorAll(".slide")];
-  const counter = document.querySelector("#slide-number");
   const status = document.querySelector("#carousel-status");
-  const toggle = document.querySelector(".autoplay-toggle");
-  const progress = document.querySelector(".carousel-progress > span");
   const labels = ["Ritratto", "Tigre", "Ornamentale", "Serpente", "Farfalla e lettering"];
   const interval = 4000;
   let current = 0;
-  let userPaused = motionQuery.matches;
   let hovering = false;
   let focusWithin = false;
   let inView = false;
   let timer = null;
 
   function canPlay() {
-    return !userPaused && !hovering && !focusWithin && inView
+    return !hovering && !focusWithin && inView
       && !document.hidden && !motionQuery.matches;
   }
 
   function schedule() {
     window.clearTimeout(timer);
-    progress.style.transition = "none";
-    progress.style.transform = "scaleX(0)";
     if (!canPlay()) return;
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        if (!canPlay()) return;
-        progress.style.transition = `transform ${interval}ms linear`;
-        progress.style.transform = "scaleX(1)";
-      });
-    });
     timer = window.setTimeout(() => goTo(current + 1), interval);
   }
 
@@ -150,7 +137,6 @@
       slide.classList.toggle("is-active", position === 0);
       slide.setAttribute("aria-hidden", String(position !== 0));
     });
-    counter.textContent = String(current + 1).padStart(2, "0");
     if (manual) {
       status.textContent = `Tatuaggio ${current + 1} di 5: ${labels[current]}`;
     }
@@ -204,28 +190,7 @@
     touchStart = null;
   }, { passive: true });
 
-  function updateToggle() {
-    toggle.hidden = motionQuery.matches;
-    const paused = userPaused || motionQuery.matches;
-    toggle.setAttribute("aria-pressed", String(paused));
-    toggle.setAttribute("aria-label", paused ? "Avvia il carosello" : "Metti in pausa il carosello");
-    toggle.innerHTML = paused ? 'AVVIA <span aria-hidden="true">▷</span>' : 'PAUSA <span aria-hidden="true">Ⅱ</span>';
-  }
-
-  toggle.addEventListener("click", () => {
-    if (motionQuery.matches) {
-      goTo(current + 1, true);
-      return;
-    }
-    userPaused = !userPaused;
-    updateToggle();
-    schedule();
-  });
-  motionQuery.addEventListener("change", () => {
-    userPaused = motionQuery.matches;
-    updateToggle();
-    schedule();
-  });
+  motionQuery.addEventListener("change", schedule);
   document.addEventListener("visibilitychange", schedule);
 
   if ("IntersectionObserver" in window) {
@@ -237,7 +202,6 @@
     inView = true;
     schedule();
   }
-  updateToggle();
   goTo(0);
 
   // Dialogo nativo: focus contenuto, chiusura con Escape e ritorno al trigger.

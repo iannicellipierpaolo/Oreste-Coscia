@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
-      /* Il canvas decorativo non deve mai partecipare al layout. */
+      
       .bee-stage {
         position: fixed;
         inset: 0;
@@ -28,11 +28,11 @@
         pointer-events: none;
       }
     </style>
-    <link rel="stylesheet" href="css/style.css?v=20261117-2">
+    <link rel="stylesheet" href="css/style.css?v=20261119-2">
     <script src="js/config.js?v=20261117-2" defer></script>
     <script src="js/vendor/gsap.min.js?v=20261117-2" defer></script>
     <script src="js/vendor/ScrollTrigger.min.js?v=20261117-2" defer></script>
-    <script src="js/script.js?v=20261117-2" defer></script>
+    <script src="js/script.js?v=20261119-2" defer></script>
     <script type="importmap">
       {
         "imports": {
@@ -123,7 +123,10 @@
       <section class="hero section" id="home" aria-labelledby="hero-title">
         <div class="hero-copy">
           <div class="eyebrow hero-since"><span>Dal 1999</span><i></i></div>
-          <h1 id="hero-title"><span>ORESTE</span><span>COSCIA</span></h1>
+          <h1 id="hero-title">
+            <span>ORESTE</span>
+            <span class="neon">COSCIA</span>
+          </h1>
           <p class="hero-subtitle">TATTOO <em>&amp;</em> PIERCING</p>
           <p class="services">BLACKWORK <b>/</b> FINELINE <b>/</b> LETTERING <b>/</b><br> PIERCING <b>/</b> MICRODERMALS</p>
         </div>
@@ -145,7 +148,10 @@
         <div class="artist-copy">
           <div class="bee-artist" data-bee-anchor="artist" aria-hidden="true"></div>
           <div class="eyebrow section-label" data-reveal><span class="slashes">//</span><span>L’artista</span><i></i></div>
-          <h2 id="artist-title" data-reveal>ORESTE<br>COSCIA</h2>
+          <h2 id="artist-title" data-reveal>
+            ORESTE<br>
+            <span class="neon">COSCIA</span>
+          </h2>
           <div class="accent-rule" data-reveal></div>
           <p data-reveal>Oreste Coscia è un tatuatore e piercer attivo dal 1999. Realizza tatuaggi in stile blackwork, fineline e lettering, e si occupa di piercing e microdermals.</p>
         </div>
@@ -154,7 +160,9 @@
       <section class="works section section-pad" id="lavori" aria-labelledby="works-title">
         <div class="eyebrow section-label" data-reveal><span class="slashes">//</span><span>I lavori</span><i></i></div>
         <div class="works-heading">
-          <h2 id="works-title" data-reveal>I LAVORI</h2>
+          <h2 id="works-title" class="neon" data-reveal>
+            I LAVORI
+          </h2>
           <p class="mono works-services" data-reveal>
             <span>BLACKWORK</span>
             <span>FINELINE</span>
@@ -188,11 +196,6 @@
           </div>
           <button class="carousel-arrow prev" type="button" aria-label="Tatuaggio precedente">←</button>
           <button class="carousel-arrow next" type="button" aria-label="Tatuaggio successivo">→</button>
-          <div class="carousel-meta">
-            <span class="slide-counter mono"><span id="slide-number">01</span><span class="counter-total"> / 05</span></span>
-            <button class="autoplay-toggle mono" type="button" aria-label="Metti in pausa il carosello" aria-pressed="false">PAUSA <span aria-hidden="true">Ⅱ</span></button>
-          </div>
-          <div class="carousel-progress" aria-hidden="true"><span></span></div>
           <p class="sr-only" id="carousel-status" aria-live="polite" aria-atomic="true"></p>
         </div>
       </section>
@@ -200,7 +203,10 @@
       <section class="contact section section-pad" id="contatti" aria-labelledby="contact-title">
         <div class="contact-intro">
           <div class="eyebrow section-label" data-reveal><span class="slashes">//</span><span>Contatti</span><i></i></div>
-          <h2 id="contact-title" data-reveal>PRENOTA<br>IL TUO TATTOO<span class="neon">.</span></h2>
+          <h2 id="contact-title" data-reveal>
+            PRENOTA<br>
+            IL TUO <span class="neon">TATTOO.</span>
+          </h2>
           <p data-reveal>Scrivimi per info, disponibilità e prenotazioni.</p>
           <div class="contact-action">
           <a class="text-link contact-call" data-contact="phone" href="tel:+393491203719">Parliamone <span aria-hidden="true">↗</span></a>

@@ -113,8 +113,14 @@ h2 {
 .eyebrow i {
   flex: 1;
   height: 1px;
-  background: var(--white);
-  opacity: 0.7;
+  background: currentColor
+}
+
+.hero-since,
+.section-label,
+.contact-column h3,
+.reviews .eyebrow {
+  color: var(--neon);
 }
 
 .section-label .slashes {
@@ -297,6 +303,7 @@ h2 {
 
 .services b {
   margin: 0 14px;
+  color: var(--neon);
   font-weight: 400;
 }
 
@@ -561,7 +568,8 @@ h2 {
 .carousel-arrow {
   position: absolute;
   z-index: 6;
-  top: calc(50% - 50px);
+  top: 50%;
+  transform: translateY(-50%);
   display: grid;
   place-items: center;
   width: 54px;
