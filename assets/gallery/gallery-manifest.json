@@ -1,42 +1,114 @@
 [
   {
     "id": 1,
-    "title": "ritratto",
-    "original": "assets/gallery/tattoo-01-ritratto.jpg",
-    "preview_bw": "assets/gallery/tattoo-01-ritratto-bw.webp",
-    "width": 402,
-    "height": 497
+    "title": "tattoo-06-teschio-serpente",
+    "original": "assets/gallery/tattoo-06-teschio-serpente-bw.webp",
+    "preview_bw": "assets/gallery/tattoo-06-teschio-serpente-bw.webp",
+    "width": 1800,
+    "height": 1200
   },
   {
     "id": 2,
-    "title": "tigre",
-    "original": "assets/gallery/tattoo-02-tigre.jpg",
-    "preview_bw": "assets/gallery/tattoo-02-tigre-bw.webp",
-    "width": 498,
-    "height": 616
+    "title": "tattoo-07-piercing-lingua",
+    "original": "assets/gallery/tattoo-07-piercing-lingua-bw.webp",
+    "preview_bw": "assets/gallery/tattoo-07-piercing-lingua-bw.webp",
+    "width": 1800,
+    "height": 1361
   },
   {
     "id": 3,
-    "title": "ornamentale",
-    "original": "assets/gallery/tattoo-03-ornamentale.jpg",
-    "preview_bw": "assets/gallery/tattoo-03-ornamentale-bw.webp",
-    "width": 435,
-    "height": 704
+    "title": "tattoo-08-floreale-schiena",
+    "original": "assets/gallery/tattoo-08-floreale-schiena-bw.webp",
+    "preview_bw": "assets/gallery/tattoo-08-floreale-schiena-bw.webp",
+    "width": 1200,
+    "height": 1800
   },
   {
     "id": 4,
-    "title": "serpente",
-    "original": "assets/gallery/tattoo-04-serpente.jpg",
-    "preview_bw": "assets/gallery/tattoo-04-serpente-bw.webp",
-    "width": 554,
-    "height": 554
+    "title": "tattoo-09-piercing-septum",
+    "original": "assets/gallery/tattoo-09-piercing-septum-bw.webp",
+    "preview_bw": "assets/gallery/tattoo-09-piercing-septum-bw.webp",
+    "width": 1201,
+    "height": 1800
   },
   {
     "id": 5,
-    "title": "farfalla-lettering",
-    "original": "assets/gallery/tattoo-05-farfalla-lettering.jpg",
-    "preview_bw": "assets/gallery/tattoo-05-farfalla-lettering-bw.webp",
-    "width": 554,
-    "height": 554
+    "title": "tattoo-10-ritratto-braccio",
+    "original": "assets/gallery/tattoo-10-ritratto-braccio-bw.webp",
+    "preview_bw": "assets/gallery/tattoo-10-ritratto-braccio-bw.webp",
+    "width": 1200,
+    "height": 1800
+  },
+  {
+    "id": 6,
+    "title": "tattoo-11-piercing-trago",
+    "original": "assets/gallery/tattoo-11-piercing-trago-bw.webp",
+    "preview_bw": "assets/gallery/tattoo-11-piercing-trago-bw.webp",
+    "width": 1201,
+    "height": 1800
+  },
+  {
+    "id": 7,
+    "title": "tattoo-12-cristo-braccio",
+    "original": "assets/gallery/tattoo-12-cristo-braccio-bw.webp",
+    "preview_bw": "assets/gallery/tattoo-12-cristo-braccio-bw.webp",
+    "width": 1200,
+    "height": 1800
+  },
+  {
+    "id": 8,
+    "title": "tattoo-13-piercing-labbro",
+    "original": "assets/gallery/tattoo-13-piercing-labbro-bw.webp",
+    "preview_bw": "assets/gallery/tattoo-13-piercing-labbro-bw.webp",
+    "width": 1800,
+    "height": 1201
+  },
+  {
+    "id": 9,
+    "title": "tattoo-14-albero-schiena",
+    "original": "assets/gallery/tattoo-14-albero-schiena-bw.webp",
+    "preview_bw": "assets/gallery/tattoo-14-albero-schiena-bw.webp",
+    "width": 1800,
+    "height": 1800
+  },
+  {
+    "id": 10,
+    "title": "tattoo-15-piercing-orecchio",
+    "original": "assets/gallery/tattoo-15-piercing-orecchio-bw.webp",
+    "preview_bw": "assets/gallery/tattoo-15-piercing-orecchio-bw.webp",
+    "width": 1200,
+    "height": 1800
+  },
+  {
+    "id": 11,
+    "title": "tattoo-16-uccello-fine-line",
+    "original": "assets/gallery/tattoo-16-uccello-fine-line-bw.webp",
+    "preview_bw": "assets/gallery/tattoo-16-uccello-fine-line-bw.webp",
+    "width": 1200,
+    "height": 1800
+  },
+  {
+    "id": 12,
+    "title": "tattoo-17-piercing-smiley",
+    "original": "assets/gallery/tattoo-17-piercing-smiley-bw.webp",
+    "preview_bw": "assets/gallery/tattoo-17-piercing-smiley-bw.webp",
+    "width": 1800,
+    "height": 1200
+  },
+  {
+    "id": 13,
+    "title": "tattoo-18-volto-serpente",
+    "original": "assets/gallery/tattoo-18-volto-serpente-bw.webp",
+    "preview_bw": "assets/gallery/tattoo-18-volto-serpente-bw.webp",
+    "width": 1008,
+    "height": 1800
+  },
+  {
+    "id": 14,
+    "title": "tattoo-19-piercing-vertical-labret",
+    "original": "assets/gallery/tattoo-19-piercing-vertical-labret-bw.webp",
+    "preview_bw": "assets/gallery/tattoo-19-piercing-vertical-labret-bw.webp",
+    "width": 1800,
+    "height": 1200
   }
 ]

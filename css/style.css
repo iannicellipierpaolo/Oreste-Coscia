@@ -1725,6 +1725,74 @@ address {
     gap: 25px;
   }
 }
+
+/* Fotografia ambientale: neri profondi, dissolvenza su tutti i bordi. */
+.contact-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(
+    ellipse 84% 68% at 68% 43%,
+    #000 10%,
+    rgba(0, 0, 0, 0.85) 40%,
+    transparent 78%
+  );
+  mask-image: radial-gradient(
+    ellipse 84% 68% at 68% 43%,
+    #000 10%,
+    rgba(0, 0, 0, 0.85) 40%,
+    transparent 78%
+  );
+}
+
+.contact-background::before {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  background-image: url("../assets/contacts/tattoo-session-horizontal-bw.webp");
+  background-size: cover;
+  background-position: 62% 38%;
+  opacity: 0.3;
+  filter: grayscale(1) contrast(1.12) brightness(0.74) blur(3px);
+}
+
+.contact-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    rgba(8, 8, 8, 0.8) 0%,
+    rgba(8, 8, 8, 0.12) 56%,
+    rgba(8, 8, 8, 0.38) 100%
+  );
+}
+
+@media (max-width: 760px) {
+  .contact-background {
+    -webkit-mask-image: radial-gradient(
+      ellipse 110% 60% at 67% 36%,
+      #000 10%,
+      transparent 85%
+    );
+    mask-image: radial-gradient(
+      ellipse 110% 60% at 67% 36%,
+      #000 10%,
+      transparent 85%
+    );
+  }
+
+  .contact-background::before {
+    background-position: 58% 35%;
+    opacity: 0.24;
+    filter: grayscale(1) contrast(1.1) brightness(0.7) blur(2px);
+  }
+}
+
+/* Tinta verde ripristinata come nella versione fornita. */
+
 .gallery-card {
   isolation: isolate;
 }

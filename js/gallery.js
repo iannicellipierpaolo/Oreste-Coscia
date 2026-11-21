@@ -13,6 +13,14 @@
   const galleryURL = new URL("assets/gallery/", document.baseURI);
   const collator = new Intl.Collator("it", { numeric: true, sensitivity: "base" });
   const imagePattern = /\.(avif|webp|jpe?g|png|gif)$/i;
+  // Esclude i vecchi soggetti anche se ancora presenti nel repository remoto.
+  const retiredPhotos = new Set([
+    "tattoo-01-ritratto",
+    "tattoo-02-tigre",
+    "tattoo-03-ornamentale",
+    "tattoo-04-serpente",
+    "tattoo-05-farfalla-lettering"
+  ]);
   const interval = 5000;
   const duration = 700;
   const cards = [];
@@ -37,6 +45,7 @@
       if (typeof file !== "string" || file.startsWith(".") || !imagePattern.test(file)) return;
       if (file.includes("/") || file.includes("\\")) return;
       const key = file.replace(imagePattern, "").replace(/-bw$/i, "").toLowerCase();
+      if (retiredPhotos.has(key)) return;
       const saved = unique.get(key);
       if (!saved || priority(file) > priority(saved)) unique.set(key, file);
     });
@@ -89,12 +98,12 @@
 
     if (updateImage) {
       image.src = photoURL(photos[index]);
-      image.alt = `Tatuaggio di Oreste Coscia: ${photoLabel(photos[index])}`;
+      image.alt = `Foto di tatuaggi e piercing: ${photoLabel(photos[index])}`;
     }
   }
 
   function announce() {
-    status.textContent = `Tatuaggio ${current + 1} di ${photos.length}: ${photoLabel(photos[current])}`;
+    status.textContent = `Foto ${current + 1} di ${photos.length}: ${photoLabel(photos[current])}`;
   }
 
   function paint() {
@@ -282,7 +291,7 @@
 
       if (!/^[\w.-]+\/[\w.-]+$/.test(repo)) return;
       const branch = config.galleryBranch || "main";
-      const cacheKey = `oreste-gallery:${repo}:${branch}`;
+      const cacheKey = `oreste-gallery-v3:${repo}:${branch}`;
       try {
         const cached = JSON.parse(localStorage.getItem(cacheKey));
         if (cached && Array.isArray(cached.files)) {

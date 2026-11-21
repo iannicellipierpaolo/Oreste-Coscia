@@ -56,7 +56,7 @@ def main():
             '              role="group" aria-roledescription="diapositiva"',
             f'              aria-label="{index + 1} di {len(files)}: {escape(label, quote=True)}">',
             f'              <img src="assets/gallery/{quote(filename)}"',
-            f'                alt="Tatuaggio di Oreste Coscia: {escape(label, quote=True)}"',
+            f'                alt="Foto di tatuaggi e piercing: {escape(label, quote=True)}"',
             '                width="600" height="800" loading="lazy">',
             '            </figure>',
         ])
