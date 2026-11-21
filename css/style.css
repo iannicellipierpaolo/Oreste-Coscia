@@ -1725,3 +1725,28 @@ address {
     gap: 25px;
   }
 }
+.gallery-card {
+  isolation: isolate;
+}
+.gallery-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: var(--neon);
+  mix-blend-mode: color;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 700ms ease;
+}
+.gallery-card[data-position="-1"]::before,
+.gallery-card[data-position="1"]::before {
+  opacity: 0.65;
+}
+.gallery-card[data-position="-2"]::before,
+.gallery-card[data-position="2"]::before {
+  opacity: 0.95;
+}
+.gallery-card::after {
+  z-index: 2;
+}
