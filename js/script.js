@@ -1,7 +1,6 @@
 (() => {
   "use strict";
 
-  const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
   const config = window.ORESTE_CONFIG || {};
   const header = document.querySelector(".header");
   const menuButton = document.querySelector(".menu-toggle");
@@ -104,105 +103,6 @@
       sectionObserver.observe(section);
     });
   }
-
-  // Carosello accessibile: loop, hover, focus e swipe.
-  const carousel = document.querySelector(".carousel");
-  const slides = [...carousel.querySelectorAll(".slide")];
-  const status = document.querySelector("#carousel-status");
-  const labels = ["Ritratto", "Tigre", "Ornamentale", "Serpente", "Farfalla e lettering"];
-  const interval = 4000;
-  let current = 0;
-  let hovering = false;
-  let focusWithin = false;
-  let inView = false;
-  let timer = null;
-
-  function canPlay() {
-    return !hovering && !focusWithin && inView
-      && !document.hidden && !motionQuery.matches;
-  }
-
-  function schedule() {
-    window.clearTimeout(timer);
-    if (!canPlay()) return;
-    timer = window.setTimeout(() => goTo(current + 1), interval);
-  }
-
-  function goTo(index, manual = false) {
-    current = (index + slides.length) % slides.length;
-    slides.forEach((slide, slideIndex) => {
-      let position = (slideIndex - current + slides.length) % slides.length;
-      if (position > 2) position -= slides.length;
-      slide.dataset.position = position;
-      slide.classList.toggle("is-active", position === 0);
-      slide.setAttribute("aria-hidden", String(position !== 0));
-    });
-    if (manual) {
-      status.textContent = `Tatuaggio ${current + 1} di 5: ${labels[current]}`;
-    }
-    schedule();
-  }
-
-  carousel.querySelector(".prev").addEventListener("click", () => goTo(current - 1, true));
-  carousel.querySelector(".next").addEventListener("click", () => goTo(current + 1, true));
-  carousel.addEventListener("keydown", (event) => {
-    if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
-    event.preventDefault();
-    if (event.key === "ArrowLeft") goTo(current - 1, true);
-    if (event.key === "ArrowRight") goTo(current + 1, true);
-    if (event.key === "Home") goTo(0, true);
-    if (event.key === "End") goTo(slides.length - 1, true);
-  });
-
-  carousel.addEventListener("pointerenter", (event) => {
-    if (event.pointerType !== "mouse") return;
-    hovering = true;
-    schedule();
-  });
-  carousel.addEventListener("pointerleave", () => {
-    hovering = false;
-    schedule();
-  });
-  carousel.addEventListener("focusin", () => {
-    focusWithin = true;
-    schedule();
-  });
-  carousel.addEventListener("focusout", (event) => {
-    if (carousel.contains(event.relatedTarget)) return;
-    focusWithin = false;
-    schedule();
-  });
-
-  let touchStart = null;
-  carousel.addEventListener("touchstart", (event) => {
-    touchStart = {
-      x: event.changedTouches[0].clientX,
-      y: event.changedTouches[0].clientY
-    };
-  }, { passive: true });
-  carousel.addEventListener("touchend", (event) => {
-    if (!touchStart) return;
-    const dx = event.changedTouches[0].clientX - touchStart.x;
-    const dy = event.changedTouches[0].clientY - touchStart.y;
-    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.3) {
-      goTo(current + (dx < 0 ? 1 : -1), true);
-    }
-    touchStart = null;
-  }, { passive: true });
-
-  motionQuery.addEventListener("change", schedule);
-  document.addEventListener("visibilitychange", schedule);
-
-  if ("IntersectionObserver" in window) {
-    new IntersectionObserver((entries) => {
-      inView = entries[0].isIntersecting;
-      schedule();
-    }, { threshold: 0.2 }).observe(carousel);
-  } else {
-    inView = true;
-    schedule();
-  }
-  goTo(0);
 
   // Dialogo nativo: focus contenuto, chiusura con Escape e ritorno al trigger.
   const dialog = document.querySelector(".credits-dialog");

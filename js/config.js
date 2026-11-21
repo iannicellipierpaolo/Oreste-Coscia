@@ -1,5 +1,9 @@
 /* Recapiti centralizzati. Confermare i dati prima del lancio ufficiale. */
 window.ORESTE_CONFIG = {
+  // Su github.io il repository viene riconosciuto automaticamente.
+  // Per un dominio personalizzato: "iannicellipierpaolo/Oreste-Coscia".
+  galleryRepository: null,
+  galleryBranch: "main",
   phone: "+39xxxxxxxxxxx",
   phoneDisplay: "+39 xxx xxx xxxx",
   email: null,
