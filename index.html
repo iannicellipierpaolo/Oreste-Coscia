@@ -28,13 +28,13 @@
         pointer-events: none;
       }
     </style>
-    <link rel="stylesheet" href="css/style.css?v=20261121-photos-3">
+    <link rel="stylesheet" href="css/style.css?v=20261126-gallerie">
     <script src="js/config.js?v=20261121-photos-3" defer></script>
     <script src="js/vendor/gsap.min.js?v=20261117-2" defer></script>
     <script src="js/vendor/ScrollTrigger.min.js?v=20261117-2" defer></script>
     <script src="js/script.js?v=20261121-photos-3" defer></script>
     <script src="js/gallery-data.js?v=20261121-photos-3" defer></script>
-    <script src="js/gallery.js?v=20261121-photos-3" defer></script>
+    <script src="js/gallery.js?v=20261126-gallerie" defer></script>
     <script type="importmap">
       {
         "imports": {
@@ -183,120 +183,131 @@
           <span data-bee-anchor="works-start"></span>
           <span data-bee-anchor="works-end"></span>
         </div>
-        <div class="carousel" role="region" aria-roledescription="carosello" aria-label="Galleria dei lavori di Oreste Coscia" tabindex="0">
-          <div class="carousel-stage" id="gallery-stage">
+        <div class="carousel" data-gallery="tatuaggi" role="region"
+          aria-roledescription="carosello" aria-labelledby="gallery-tatuaggi-title" tabindex="0">
+          <h3 class="carousel-title mono" id="gallery-tatuaggi-title">Tatuaggi</h3>
+          <div class="carousel-stage" id="gallery-tatuaggi-stage">
             <figure class="gallery-card" data-position="-2"
               role="group" aria-roledescription="diapositiva"
-              aria-label="1 di 14: teschio serpente">
+              aria-label="1 di 7: teschio serpente">
               <img src="assets/gallery/tattoo-06-teschio-serpente-bw.webp"
-                alt="Foto di tatuaggi e piercing: teschio serpente"
-                width="600" height="800" loading="lazy">
+                alt="teschio serpente" width="600" height="800" loading="lazy">
             </figure>
             <figure class="gallery-card" data-position="-1"
               role="group" aria-roledescription="diapositiva"
-              aria-label="2 di 14: piercing lingua">
-              <img src="assets/gallery/tattoo-07-piercing-lingua-bw.webp"
-                alt="Foto di tatuaggi e piercing: piercing lingua"
-                width="600" height="800" loading="lazy">
+              aria-label="2 di 7: floreale schiena">
+              <img src="assets/gallery/tattoo-08-floreale-schiena-bw.webp"
+                alt="floreale schiena" width="600" height="800" loading="lazy">
             </figure>
             <figure class="gallery-card is-active" data-position="0"
               role="group" aria-roledescription="diapositiva"
-              aria-label="3 di 14: floreale schiena">
-              <img src="assets/gallery/tattoo-08-floreale-schiena-bw.webp"
-                alt="Foto di tatuaggi e piercing: floreale schiena"
-                width="600" height="800" loading="lazy">
+              aria-label="3 di 7: ritratto braccio">
+              <img src="assets/gallery/tattoo-10-ritratto-braccio-bw.webp"
+                alt="ritratto braccio" width="600" height="800" loading="lazy">
             </figure>
             <figure class="gallery-card" data-position="1"
               role="group" aria-roledescription="diapositiva"
-              aria-label="4 di 14: piercing septum">
-              <img src="assets/gallery/tattoo-09-piercing-septum-bw.webp"
-                alt="Foto di tatuaggi e piercing: piercing septum"
-                width="600" height="800" loading="lazy">
+              aria-label="4 di 7: cristo braccio">
+              <img src="assets/gallery/tattoo-12-cristo-braccio-bw.webp"
+                alt="cristo braccio" width="600" height="800" loading="lazy">
             </figure>
             <figure class="gallery-card" data-position="2"
               role="group" aria-roledescription="diapositiva"
-              aria-label="5 di 14: ritratto braccio">
-              <img src="assets/gallery/tattoo-10-ritratto-braccio-bw.webp"
-                alt="Foto di tatuaggi e piercing: ritratto braccio"
-                width="600" height="800" loading="lazy">
-            </figure>
-            <figure class="gallery-card is-spare" data-position="3"
-              role="group" aria-roledescription="diapositiva"
-              aria-label="6 di 14: piercing trago">
-              <img src="assets/gallery/tattoo-11-piercing-trago-bw.webp"
-                alt="Foto di tatuaggi e piercing: piercing trago"
-                width="600" height="800" loading="lazy">
-            </figure>
-            <figure class="gallery-card is-spare" data-position="3"
-              role="group" aria-roledescription="diapositiva"
-              aria-label="7 di 14: cristo braccio">
-              <img src="assets/gallery/tattoo-12-cristo-braccio-bw.webp"
-                alt="Foto di tatuaggi e piercing: cristo braccio"
-                width="600" height="800" loading="lazy">
-            </figure>
-            <figure class="gallery-card is-spare" data-position="3"
-              role="group" aria-roledescription="diapositiva"
-              aria-label="8 di 14: piercing labbro">
-              <img src="assets/gallery/tattoo-13-piercing-labbro-bw.webp"
-                alt="Foto di tatuaggi e piercing: piercing labbro"
-                width="600" height="800" loading="lazy">
-            </figure>
-            <figure class="gallery-card is-spare" data-position="3"
-              role="group" aria-roledescription="diapositiva"
-              aria-label="9 di 14: albero schiena">
+              aria-label="5 di 7: albero schiena">
               <img src="assets/gallery/tattoo-14-albero-schiena-bw.webp"
-                alt="Foto di tatuaggi e piercing: albero schiena"
-                width="600" height="800" loading="lazy">
+                alt="albero schiena" width="600" height="800" loading="lazy">
             </figure>
             <figure class="gallery-card is-spare" data-position="3"
               role="group" aria-roledescription="diapositiva"
-              aria-label="10 di 14: piercing orecchio">
-              <img src="assets/gallery/tattoo-15-piercing-orecchio-bw.webp"
-                alt="Foto di tatuaggi e piercing: piercing orecchio"
-                width="600" height="800" loading="lazy">
-            </figure>
-            <figure class="gallery-card is-spare" data-position="3"
-              role="group" aria-roledescription="diapositiva"
-              aria-label="11 di 14: uccello fine line">
+              aria-label="6 di 7: uccello fine line">
               <img src="assets/gallery/tattoo-16-uccello-fine-line-bw.webp"
-                alt="Foto di tatuaggi e piercing: uccello fine line"
-                width="600" height="800" loading="lazy">
+                alt="uccello fine line" width="600" height="800" loading="lazy">
             </figure>
             <figure class="gallery-card is-spare" data-position="3"
               role="group" aria-roledescription="diapositiva"
-              aria-label="12 di 14: piercing smiley">
-              <img src="assets/gallery/tattoo-17-piercing-smiley-bw.webp"
-                alt="Foto di tatuaggi e piercing: piercing smiley"
-                width="600" height="800" loading="lazy">
-            </figure>
-            <figure class="gallery-card is-spare" data-position="3"
-              role="group" aria-roledescription="diapositiva"
-              aria-label="13 di 14: volto serpente">
+              aria-label="7 di 7: volto serpente">
               <img src="assets/gallery/tattoo-18-volto-serpente-bw.webp"
-                alt="Foto di tatuaggi e piercing: volto serpente"
-                width="600" height="800" loading="lazy">
-            </figure>
-            <figure class="gallery-card is-spare" data-position="3"
-              role="group" aria-roledescription="diapositiva"
-              aria-label="14 di 14: piercing vertical labret">
-              <img src="assets/gallery/tattoo-19-piercing-vertical-labret-bw.webp"
-                alt="Foto di tatuaggi e piercing: piercing vertical labret"
-                width="600" height="800" loading="lazy">
+                alt="volto serpente" width="600" height="800" loading="lazy">
             </figure>
           </div>
           <div class="carousel-controls">
-            <button class="carousel-arrow prev" type="button" aria-label="Foto precedente" aria-controls="gallery-stage">
+            <button class="carousel-arrow prev" type="button"
+              aria-label="Foto precedente" aria-controls="gallery-tatuaggi-stage">
               <svg viewBox="0 0 48 24" aria-hidden="true" focusable="false">
                 <path d="M45 12H3M14 2 3 12l11 10" />
               </svg>
             </button>
-          <button class="carousel-arrow next" type="button" aria-label="Foto successiva" aria-controls="gallery-stage">
+            <button class="carousel-arrow next" type="button"
+              aria-label="Foto successiva" aria-controls="gallery-tatuaggi-stage">
               <svg viewBox="0 0 48 24" aria-hidden="true" focusable="false">
                 <path d="M3 12h42M34 2l11 10-11 10" />
               </svg>
             </button>
           </div>
-          <p class="sr-only" id="carousel-status" aria-live="polite" aria-atomic="true"></p>
+          <p class="carousel-status sr-only" aria-live="polite" aria-atomic="true"></p>
+        </div>
+        <div class="carousel" data-gallery="piercing" role="region"
+          aria-roledescription="carosello" aria-labelledby="gallery-piercing-title" tabindex="0">
+          <h3 class="carousel-title mono" id="gallery-piercing-title">Piercing</h3>
+          <div class="carousel-stage" id="gallery-piercing-stage">
+            <figure class="gallery-card" data-position="-2"
+              role="group" aria-roledescription="diapositiva"
+              aria-label="1 di 7: piercing lingua">
+              <img src="assets/gallery/tattoo-07-piercing-lingua-bw.webp"
+                alt="piercing lingua" width="600" height="800" loading="lazy">
+            </figure>
+            <figure class="gallery-card" data-position="-1"
+              role="group" aria-roledescription="diapositiva"
+              aria-label="2 di 7: piercing septum">
+              <img src="assets/gallery/tattoo-09-piercing-septum-bw.webp"
+                alt="piercing septum" width="600" height="800" loading="lazy">
+            </figure>
+            <figure class="gallery-card is-active" data-position="0"
+              role="group" aria-roledescription="diapositiva"
+              aria-label="3 di 7: piercing trago">
+              <img src="assets/gallery/tattoo-11-piercing-trago-bw.webp"
+                alt="piercing trago" width="600" height="800" loading="lazy">
+            </figure>
+            <figure class="gallery-card" data-position="1"
+              role="group" aria-roledescription="diapositiva"
+              aria-label="4 di 7: piercing labbro">
+              <img src="assets/gallery/tattoo-13-piercing-labbro-bw.webp"
+                alt="piercing labbro" width="600" height="800" loading="lazy">
+            </figure>
+            <figure class="gallery-card" data-position="2"
+              role="group" aria-roledescription="diapositiva"
+              aria-label="5 di 7: piercing orecchio">
+              <img src="assets/gallery/tattoo-15-piercing-orecchio-bw.webp"
+                alt="piercing orecchio" width="600" height="800" loading="lazy">
+            </figure>
+            <figure class="gallery-card is-spare" data-position="3"
+              role="group" aria-roledescription="diapositiva"
+              aria-label="6 di 7: piercing smiley">
+              <img src="assets/gallery/tattoo-17-piercing-smiley-bw.webp"
+                alt="piercing smiley" width="600" height="800" loading="lazy">
+            </figure>
+            <figure class="gallery-card is-spare" data-position="3"
+              role="group" aria-roledescription="diapositiva"
+              aria-label="7 di 7: piercing vertical labret">
+              <img src="assets/gallery/tattoo-19-piercing-vertical-labret-bw.webp"
+                alt="piercing vertical labret" width="600" height="800" loading="lazy">
+            </figure>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-arrow prev" type="button"
+              aria-label="Foto precedente" aria-controls="gallery-piercing-stage">
+              <svg viewBox="0 0 48 24" aria-hidden="true" focusable="false">
+                <path d="M45 12H3M14 2 3 12l11 10" />
+              </svg>
+            </button>
+            <button class="carousel-arrow next" type="button"
+              aria-label="Foto successiva" aria-controls="gallery-piercing-stage">
+              <svg viewBox="0 0 48 24" aria-hidden="true" focusable="false">
+                <path d="M3 12h42M34 2l11 10-11 10" />
+              </svg>
+            </button>
+          </div>
+          <p class="carousel-status sr-only" aria-live="polite" aria-atomic="true"></p>
         </div>
       </section>
 
@@ -369,7 +380,7 @@
       <button class="dialog-close" type="button" aria-label="Chiudi crediti">×</button>
       <span class="eyebrow neon">// NOTE DI PROGETTO</span>
       <h2 id="credits-title">Fonti e crediti</h2>
-      <p>Sito vetrina dimostrativo. Le cinque fotografie dei tatuaggi e il logo provengono dal materiale fornito per il progetto. Il dettaglio della macchina da tatuaggi è un’immagine creativa generata: non raffigura lo studio o l’artista. L’ape 3D e la sua anteprima statica provengono dal materiale fornito per il progetto.</p>
+      <p>Sito vetrina dimostrativo. Le fotografie dei tatuaggi e dei piercing e il logo provengono dal materiale fornito per il progetto. Il dettaglio della macchina da tatuaggi è un’immagine creativa generata: non raffigura lo studio o l’artista. L’ape 3D e la sua anteprima statica provengono dal materiale fornito per il progetto.</p>
       <p>Telefono, orari, indirizzo e dichiarazioni su autorizzazioni e materiali sono dati di progetto da confermare con lo studio prima della pubblicazione ufficiale. Email e Facebook sono in attesa di conferma. Non vengono mostrati punteggi o conteggi di recensioni non verificati.</p>
       <p>Caratteri: Syne, Inter Tight, IBM Plex Mono (Google Fonts). Animazioni: GSAP e ScrollTrigger. Visualizzazione 3D: Three.js e GLTFLoader.</p>
     </dialog>
